@@ -17,11 +17,12 @@ function App() {
 	const [cart, setCart]=useState( [] ); 
 
 	const addItem=item => {
-		setCart( [...cart, item] )
+		setCart( [...cart, item] );
+		console.log("cart:",cart,"item:",item)
 	};
-	const removeItem=item => {
-	let filteredItems=cart.filter((cartMovie)=>{return (cartMovie.id!==item.id)})	
-	
+	const removeItem=id => {
+	let filteredItems=cart.filter(cartMovie=>cartMovie.id!==id)	
+	console.log("filteredItems:.",filteredItems)
 		setCart(filteredItems)
 		console.log("cart:",cart)
 
