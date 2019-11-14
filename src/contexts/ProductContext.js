@@ -1,6 +1,6 @@
 import {createContext} from "react"
 
-const defaultDataObject={}
+const defaultProductObject={}
 
-export const ProductContext= createContext(defaultDataObject);
+export const ProductContext= createContext(defaultProductObject);
 

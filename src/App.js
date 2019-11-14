@@ -9,6 +9,8 @@ import ShoppingCart from './components/ShoppingCart';
 
 //Contexts
 import {ProductContext} from './contexts/ProductContext';
+import {CartContext} from './contexts/CartContext';
+
 
 function App() {
 	const [products]=useState( data );
@@ -20,6 +22,7 @@ function App() {
 
 	return (
 		<ProductContext.Provider value={{products, addItem}}>
+		<CartContext.Provider value={{cart}}>
 
 
 			<div className="App">
@@ -38,6 +41,7 @@ function App() {
 				/>
 
 			</div>
+		</CartContext.Provider>
 		</ProductContext.Provider>
 	);
 }
